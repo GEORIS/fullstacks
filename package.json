@@ -1,0 +1,29 @@
+{
+  "name": "fullstacks",
+  "version": "1.0.0",
+  "description": "Hola Mundo",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GEORIS/fullstacks.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GEORIS/fullstacks/issues"
+  },
+  "homepage": "https://github.com/GEORIS/fullstacks#readme",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
