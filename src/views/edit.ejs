@@ -1,0 +1,84 @@
+<!-- IMPORTAR ARCHICO HEADER -->
+<%- include ('partials/_header'); %>
+
+<div class="container">
+<div class="row">
+<div class="cold-md-5 offset-md-3">
+    <div class="card">
+    <div class="card-body">
+        <form action="/edit/<%= task._id %>" method="POST">
+           
+            <div class="col-md-12 inline-block">
+                <!-- LABEL NOMBRE -->
+                <label> Piso </label>
+                <select name="piso" class="form-control">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                </select>
+            </div>
+            <div class="col-md-12 inline-block">
+                <label>Numero del Apartamento: </label>
+                <input type="number" name="apto" placeholder="Ingrese el numero de apartamento"
+                    class="form-control">
+            </div>
+
+            <div class="col-md-12 inline-block">
+                <label>Tipo de Apartamento: </label>
+                <input type="text" name="tipo" placeholder="Ingrese el tipo de apartamento" class="form-control">
+            </div>
+
+            <div class="col-md-12 inline-block">
+                <label>Area Cont: </label>
+                <input type="number" name="ac" placeholder="Ingrese el Area Cont del apartamento"
+                    class="form-control">
+            </div>
+
+            <div class="col-md-12 inline-block">
+                <label>Area Balcon: </label>
+                <input type="number" name="balcon" placeholder="Ingrese el Area balcon del apartamento"
+                    class="form-control">
+            </div>
+
+            <div class="col-md-12 inline-block">
+                <label>Area total: </label>
+                <input type="number" name="ac_balcon" placeholder="Ingrese el Area Total del apartamento"
+                    class="form-control">
+            </div>
+
+            <div class="col-md-12 inline-block">
+                <label>Area Privada: </label>
+                <input type="number" name="priv" placeholder="Ingrese el Area Privada del apartamento"
+                    class="form-control">
+            </div>
+
+            <div class="col-md-12 inline-block">
+
+                <label> Disponibilidad: </label>
+                <select name="piso" cols="80" class="form-control">
+                    <option>Disponible</option>
+                    <option>Reservado</option>
+                    <option>Vendido</option>
+                </select>
+
+
+            </div>
+
+            <br>
+            <div class="col-md-12 inline-block">
+                <button type="submit" class="btn btn-primary btn-block"> AGREGAR </button>
+            </div>
+
+        </form>
+    </div>
+    </div>
+</div>
+</div>
+</div>
+
+<!-- IMPORTAR FOOTER (pie de página) -->
+<%- include ('partials/_footer'); %>
