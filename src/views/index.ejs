@@ -1,0 +1,135 @@
+<!-- IMPORTAR ARCHICO HEADER -->
+<%- include ('partials/_header'); %>
+
+<!-- CUERPO DE PAGINA -->
+
+<!-- INICIO FORMULARIO -->
+<div class="row">
+    <!-- TAMAÑO DEL ROW(REJILLA) -->
+    <div class="col-md-5 p-5">
+        <!-- COLOR DE FONDO BG Y COLOR DEL TEXT EN EL ENCABEZADO DEL FORMULARIO -->
+        <div class="card bg-primary text-white">
+            <!-- card-header Encavezado del ROW -->
+            <div class="card-header">
+                <h3>Apartamentos</h3>
+            </div>
+        </div>
+       
+        <!-- COLOR DE FONDO Y LETRA PARA LA REJILLA DOBY DEL FORMULARIO -->
+        <div class="card bg-light text-dark">
+            <!-- card-BODY par el DOBY DEL ROW  -->
+            <div class="card-body">
+                <form action="/add" method="POST">
+                <!-- TAMAÑO DEL CAMPO PARA INGRESAR NOMBRE -->
+                <div class="col-md-12 inline-block">
+                    <!-- LABEL NOMBRE -->
+                    <label> Piso </label>
+                    <select name="piso" class="form-control">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                    </select>
+                </div>
+                <div class="col-md-12 inline-block">
+                    <label>Numero del Apartamento: </label>
+                    <input type="number" name="apto" placeholder="Ingrese el numero de apartamento"
+                        class="form-control">
+                </div>
+
+                <div class="col-md-12 inline-block">
+                    <label>Tipo de Apartamento: </label>
+                    <input type="text" name="tipo" placeholder="Ingrese el tipo de apartamento" class="form-control">
+                </div>
+
+                <div class="col-md-12 inline-block">
+                    <label>Area Cont: </label>
+                    <input type="number" name="ac" placeholder="Ingrese el Area Cont del apartamento"
+                        class="form-control">
+                </div>
+
+                <div class="col-md-12 inline-block">
+                    <label>Area Balcon: </label>
+                    <input type="number" name="balcon" placeholder="Ingrese el Area balcon del apartamento"
+                        class="form-control">
+                </div>
+
+                <div class="col-md-12 inline-block">
+                    <label>Area total: </label>
+                    <input type="number" name="ac_balcon" placeholder="Ingrese el Area Total del apartamento"
+                        class="form-control">
+                </div>
+
+                <div class="col-md-12 inline-block">
+                    <label>Area Privada: </label>
+                    <input type="number" name="apriv" placeholder="Ingrese el Area Privada del apartamento"
+                        class="form-control">
+                </div>
+
+                <div class="col-md-12 inline-block">
+
+                    <label> Disponibilidad: </label>
+                    <select name="disponibilidad" cols="80" class="form-control">
+                        <option>Disponible</option>
+                        <option>Reservado</option>
+                        <option>Vendido</option>
+                    </select>
+
+
+                </div>
+
+                <br>
+                <div class="col-md-12 inline-block">
+                    <button type="submit" class="btn btn-primary btn-block"> AGREGAR </button>
+                </div>
+            </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--   TABLA LISTAR -->
+<div class="cold-md-5 p-5">
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Nº</th>
+                <th>Piso</th>
+                <th>Apartemento</th>
+                <th>Tipo</th>
+                <th>Area Const</th>
+                <th>Area Balcon</th>
+                <th>A.C + Balcon</th>
+                <th>Area Priv</th>
+                <th>Disponibilidad</th>
+                <th>Operaciones</th>
+            </tr>
+        </thead>
+<!-- INSERTAR DATOS A LA BD      -->           
+        <tbody>
+<% for(var i = 0; i < tasks.length; i++){ %>
+<tr>
+<td> <%= i + 1 %></td>
+<td> <%= tasks[i].piso %></td>
+<td> <%= tasks[i].apto %></td>
+<td> <%= tasks[i].tipo %></td>
+<td> <%= tasks[i].ac %></td>
+<td> <%= tasks[i].balcon %></td>
+<td> <%= tasks[i].ac_balcon %></td>
+<td> <%= tasks[i].apriv %></td>
+<td> <%= tasks[i].disponibilidad %></td>
+<td>
+
+
+</td>
+</tr>
+<% } %>
+<!-- FIN DE INSERTAR DATOS A LA BD -->
+
+
+                <!-- IMPORTAR FOOTER (pie de página) -->
+                <%- include ('partials/_footer'); %>
