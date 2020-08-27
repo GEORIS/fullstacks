@@ -21,16 +21,22 @@ router.post('/add', async (req, res) => {
     
        
 });
-/* 
-RUTA PARA BOTON DONE */
-router.get('/turn/:id', async (req, res) =>{
+/* RUTA PARA EL EDITAR */
+router.get('/edit/:id', async (req, res) => {
     const { id } = req.params;
     const task = await Task.findById(id);
-    task.status = !task.status;
-    await task.save();
-    res.redirect('/');
-
-});
+    res.render( 'edit', {
+        task
+        });
+    });
+    
+    /* RUTA PARA ACTUALIZAR DATOS */
+    router.post('/edit/:id', async (req, res) => {
+        const { id } = req.params;
+        await Task.update({_id: id}, req.body);
+        res.redirect('/');
+    } );
+    
 
 
 /* RUTA PARA BORRAR */
