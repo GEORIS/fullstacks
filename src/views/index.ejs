@@ -6,9 +6,9 @@
 <!-- INICIO FORMULARIO -->
 <div class="row">
     <!-- TAMAÑO DEL ROW(REJILLA) -->
-    <div class="col-md-5 p-5">
+    <div class="p-4 col-xl-4" >
         <!-- COLOR DE FONDO BG Y COLOR DEL TEXT EN EL ENCABEZADO DEL FORMULARIO -->
-        <div class="card bg-primary text-white">
+        <div class="card bg-danger text-white">
             <!-- card-header Encavezado del ROW -->
             <div class="card-header">
                 <h3>Apartamentos</h3>
@@ -20,6 +20,14 @@
             <!-- card-BODY par el DOBY DEL ROW  -->
             <div class="card-body">
                 <form action="/add" method="POST">
+
+                    <div class="col-md-12 inline-block">
+                        <label>Torre: </label>
+                        <select name="torre" class="form-control">
+                            <option>1</option>
+                            <option>2</option>
+                        </select>
+                    </div>
                 <!-- TAMAÑO DEL CAMPO PARA INGRESAR NOMBRE -->
                 <div class="col-md-12 inline-block">
                     <!-- LABEL NOMBRE -->
@@ -47,25 +55,25 @@
 
                 <div class="col-md-12 inline-block">
                     <label>Area Cont: </label>
-                    <input type="number" name="ac" placeholder="Ingrese el Area Cont del apartamento"
+                    <input type="number" step="any" name="ac" placeholder="Ingrese el Area Cont del apartamento"
                         class="form-control">
                 </div>
 
                 <div class="col-md-12 inline-block">
                     <label>Area Balcon: </label>
-                    <input type="number" name="balcon" placeholder="Ingrese el Area balcon del apartamento"
+                    <input type="number" step="any" name="balcon" placeholder="Ingrese el Area balcon del apartamento"
                         class="form-control">
                 </div>
 
                 <div class="col-md-12 inline-block">
                     <label>Area total: </label>
-                    <input type="number" name="ac_balcon" placeholder="Ingrese el Area Total del apartamento"
+                    <input type="number" step="any" name="ac_balcon" placeholder="Ingrese el Area Total del apartamento"
                         class="form-control">
                 </div>
 
                 <div class="col-md-12 inline-block">
                     <label>Area Privada: </label>
-                    <input type="number" name="apriv" placeholder="Ingrese el Area Privada del apartamento"
+                    <input type="number" step="any" name="apriv" placeholder="Ingrese el Area Privada del apartamento"
                         class="form-control">
                 </div>
 
@@ -90,22 +98,24 @@
             </div>
         </div>
     </div>
-</div>
 
-<!--   TABLA LISTAR -->
-<div class="cold-md-5 p-5">
+    <!--   TABLA LISTAR -->
+<div class="col-md-8 p-4 ">
     <table class="table table-bordered table-hover">
         <thead>
+            <h1>Lista de Apartamentos</h1>
+
             <tr>
                 <th>Nº</th>
+                <th>Torre</th>
                 <th>Piso</th>
-                <th>Apartemento</th>
+                <th>Apto</th>
                 <th>Tipo</th>
-                <th>Area Const</th>
-                <th>Area Balcon</th>
+                <th>A. Const</th>
+                <th>A. Balcon</th>
                 <th>A.C + Balcon</th>
                 <th>Area Priv</th>
-                <th>Disponibilidad</th>
+                <th>Estado</th>
                 <th>Operaciones</th>
             </tr>
         </thead>
@@ -114,6 +124,7 @@
 <% for(var i = 0; i < tasks.length; i++){ %>
 <tr>
 <td> <%= i + 1 %></td>
+<td> <%= tasks[i].torre %></td>
 <td> <%= tasks[i].piso %></td>
 <td> <%= tasks[i].apto %></td>
 <td> <%= tasks[i].tipo %></td>
@@ -130,6 +141,9 @@
 </tr>
 <% } %>
 <!-- FIN DE INSERTAR DATOS A LA BD -->
+</div>
+
+
 
 
                 <!-- IMPORTAR FOOTER (pie de página) -->
