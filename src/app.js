@@ -10,10 +10,12 @@ const mongoose = require('mongoose');
 /* INICIALIZAR EXPRESS */
 const app = express();
 
+mongoose.connect('mongodb+srv://georisblanco:R3imKOiSjL5uhivJ@jagers.fiy9q.mongodb.net/apartamento?retryWrites=true&w=majority')
+
 // CONECTANDO LA BASE DE DATOS
-mongoose.connect('mongodb://localhost/apartamento')
+//mongoose.connect('mongodb://localhost/apartamento')
 /* PROMESAS PARA COMPROBAR EL ESTADO DE LA CONEXION */
-.then(db => console-console.log('BASE DE DATOS CONECTADA CORRECTAMENTE')) //MENSAJE DE CONECTADA
+.then(mongoose => console.log('BASE DE DATOS CONECTADA CORRECTAMENTE')) //MENSAJE DE CONECTADA
 .catch(err => console.log(err)); // MENSAJE DE ERROR 
 
 //IMPORT ROUTES

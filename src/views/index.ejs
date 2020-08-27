@@ -123,7 +123,8 @@
 <td> <%= tasks[i].apriv %></td>
 <td> <%= tasks[i].disponibilidad %></td>
 <td>
-
+    <a href="/delete/<%= tasks[i]._id %>" class="btn btn-danger">Delete</a>
+    <a href="/edit/<%= tasks[i]._id %>" class="btn btn-info">edit</a>
 
 </td>
 </tr>
