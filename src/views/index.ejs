@@ -106,24 +106,24 @@
             <h1>Lista de Apartamentos</h1>
 
             <tr>
-                <th>Nº</th>
-                <th>Torre</th>
-                <th>Piso</th>
-                <th>Apto</th>
-                <th>Tipo</th>
-                <th>A. Const</th>
-                <th>A. Balcon</th>
-                <th>A.C + Balcon</th>
-                <th>Area Priv</th>
-                <th>Estado</th>
-                <th>Operaciones</th>
+                <th class="btn-info">Nº</th>
+                <th class="btn-primary">Torre</th>
+                <th class="btn-primary">Piso</th>
+                <th class="btn-primary">Apto</th>
+                <th class="btn-primary">Tipo</th>
+                <th class="btn-primary">A. Const</th>
+                <th class="btn-primary">A. Balcon</th>
+                <th class="btn-primary">A.C + Balcon</th>
+                <th class="btn-primary">Area Priv</th>
+                <th class="btn-primary">Estado</th>
+                <th class="btn-primary">Operaciones</th>
             </tr>
         </thead>
 <!-- INSERTAR DATOS A LA BD      -->           
         <tbody>
 <% for(var i = 0; i < tasks.length; i++){ %>
 <tr>
-<td> <%= i + 1 %></td>
+<td class="btn-primary"> <%= i + 1 %></td>
 <td> <%= tasks[i].torre %></td>
 <td> <%= tasks[i].piso %></td>
 <td> <%= tasks[i].apto %></td>
