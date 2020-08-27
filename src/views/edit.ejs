@@ -11,76 +11,92 @@
                 <h3>Apartamentos</h3>
             </div>
         </div>
-       
+
         <!-- COLOR DE FONDO Y LETRA PARA LA REJILLA DOBY DEL FORMULARIO -->
         <div class="card bg-light text-dark">
             <!-- card-BODY par el DOBY DEL ROW  -->
             <div class="card-body">
-        <form action="/edit/<%= task._id %>" method="POST">
-           
-            <!-- TAMAÑO DEL CAMPO PARA INGRESAR NOMBRE -->
-            <div class="col-md-12 inline-block">
-                <!-- LABEL NOMBRE -->
-                <label> Piso </label>
-                <select name="piso" class="form-control">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                </select>
-            </div>
-            <div class="col-md-12 inline-block">
-                <label>Numero del Apartamento: </label>
-                <input type="number" name="apto" placeholder="Ingrese el numero de apartamento" class="form-control" value="<%=task.apto %>">
-            </div>
+                <form action="/edit/<%= task._id %>" method="POST">
 
-            <div class="col-md-12 inline-block">
-                <label>Tipo de Apartamento: </label>
-                <input type="text" name="tipo" placeholder="Ingrese el tipo de apartamento" class="form-control" value="<%=task.tipo %>">
+                    <div class="col-md-12 inline-block">
+                        <label>Torre: </label>
+                        <select name="torre" class="form-control">
+                            <option>1</option>
+                            <option>2</option>
+                        </select>
+                    </div>
+                    <!-- TAMAÑO DEL CAMPO PARA INGRESAR NOMBRE -->
+                    <div class="col-md-12 inline-block">
+                        <!-- LABEL NOMBRE -->
+                        <label> Piso </label>
+                        <select name="piso" class="form-control">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                        </select>
+                    </div>
+                    <div class="col-md-12 inline-block">
+                        <label>Numero del Apartamento: </label>
+                        <input type="number" name="apto" placeholder="Ingrese el numero de apartamento"
+                            class="form-control" value="<%=task.apto %>">
+                    </div>
+
+                    <div class="col-md-12 inline-block">
+                        <label>Tipo de Apartamento: </label>
+                        <input type="text" name="tipo" placeholder="Ingrese el tipo de apartamento" class="form-control"
+                            value="<%=task.tipo %>">
+                    </div>
+
+                    <div class="col-md-12 inline-block">
+                        <label>Area Cont: </label>
+                        <input type="number" step="any" name="ac" placeholder="Ingrese el Area Cont del apartamento"
+                            class="form-control" value="<%=task.ac %>">
+                    </div>
+
+                    <div class="col-md-12 inline-block">
+                        <label>Area Balcon: </label>
+                        <input type="number" step="any" name="balcon"
+                            placeholder="Ingrese el Area balcon del apartamento" class="form-control"
+                            value="<%=task.balcon %>">
+                    </div>
+
+                    <div class="col-md-12 inline-block">
+                        <label>Area total: </label>
+                        <input type="number" step="any" name="ac_balcon"
+                            placeholder="Ingrese el Area Total del apartamento" class="form-control"
+                            value="<%=task.ac_balcon %>">
+                    </div>
+
+                    <div class="col-md-12 inline-block">
+                        <label>Area Privada: </label>
+                        <input type="number" step="any" name="apriv"
+                            placeholder="Ingrese el Area Privada del apartamento" class="form-control"
+                            value="<%=task.apriv %>">
+                    </div>
+
+                    <div class="col-md-12 inline-block">
+
+                        <label> Disponibilidad: </label>
+                        <select name="disponibilidad" cols="80" class="form-control" value="<%=task.disponibilidad %>">
+                            <option>Disponible</option>
+                            <option>Reservado</option>
+                            <option>Vendido</option>
+                        </select>
+                    </div>
+
+                    <br>
+                    <div class="col-md-12 inline-block">
+                        <button type="submit" class="btn btn-primary btn-block"> ACTUALIZAR </button>
+                    </div>
+
+                </form>
             </div>
-
-            <div class="col-md-12 inline-block">
-                <label>Area Cont: </label>
-                <input type="number" name="ac" placeholder="Ingrese el Area Cont del apartamento" class="form-control" value="<%=task.ac %>">
-            </div>
-
-            <div class="col-md-12 inline-block">
-                <label>Area Balcon: </label>
-                <input type="number" name="balcon" placeholder="Ingrese el Area balcon del apartamento" class="form-control" value="<%=task.balcon %>">
-            </div>
-
-            <div class="col-md-12 inline-block">
-                <label>Area total: </label>
-                <input type="number" name="ac_balcon" placeholder="Ingrese el Area Total del apartamento" class="form-control" value="<%=task.ac_balcon %>">
-            </div>
-
-            <div class="col-md-12 inline-block">
-                <label>Area Privada: </label>
-                <input type="number" name="apriv" placeholder="Ingrese el Area Privada del apartamento" class="form-control" value="<%=task.apriv %>">
-            </div>
-
-            <div class="col-md-12 inline-block">
-
-                <label> Disponibilidad: </label>
-                <select name="disponibilidad" cols="80" class="form-control" value="<%=task.disponibilidad %>">
-                    <option>Disponible</option>
-                    <option>Reservado</option>
-                    <option>Vendido</option>
-                </select>
-            </div>
-
-            <br>
-            <div class="col-md-12 inline-block">
-                <button type="submit" class="btn btn-primary btn-block"> GUARDAR </button>
-            </div>
-
-        </form>
+        </div>
     </div>
-    </div>
-</div>
 </div>
 </div>
 
